@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>JoePeloquin</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+  	<title>Joe Peloquin</title>
+  	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  	<%= csrf_meta_tags %>
+  	<%= render 'layouts/shim' %> 
+	</head>
+	<body>
+		<header>
+			<h1>Joe Peloquin</h1>
+		</header>
+		<hr>
+		<%= yield %>
 
-<%= yield %>
-
-</body>
+	</body>
 </html>
