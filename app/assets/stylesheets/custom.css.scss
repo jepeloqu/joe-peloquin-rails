@@ -1,5 +1,6 @@
 /* universal */
 body {
+  padding-top: 60px;
   color: #333333;
   font: 15px/22px Helvetica,Arial,Verdana,sans-serif;
   line-height: 20px;
@@ -14,17 +15,6 @@ hr {
 	width: 550px;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-#dhr {
-    background: none repeat scroll 0 0 #DDDDDD;
-    border: medium none;
-    clear: both;
-    color: #DDDDDD;
-    float: none;
-    height: 0.1em;
-    margin: 0 0 1.4em;
-    width: 100%;
 }
 
 /* header */
