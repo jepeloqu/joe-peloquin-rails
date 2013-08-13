@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-JoePeloquin::Application.config.secret_key_base = '74c58512de585640aaa24a535fb829c66d96e610d780af1f03fe6d462592b39940783a2daf4867e82b604588a0aa42336094471747bb431341cf1a73bda3670b'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+JoePeloquin::Application.config.secret_key_base = secure_token
